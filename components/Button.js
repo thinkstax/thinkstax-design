@@ -6,33 +6,33 @@ import theme from 'styled-theming';
 import { THEME_DEFAULT, THEME_PROPTYPE, themeModes } from '../constants';
 import { create as createEnum } from '../utils/enum';
 
-const TTO = themeModes.TURBO_TAX_ONLINE;
+const { DARK } = themeModes;
 const backgroundColor = theme.variants('mode', 'type', {
-  default: { [TTO]: '#d4d7dc' },
-  primary: { [TTO]: ({ inverted }) => (inverted ? '#ffffff' : '#06b6c9') },
-  link: { [TTO]: 'none' }
+  default: { [DARK]: '#d4d7dc' },
+  primary: { [DARK]: ({ inverted }) => (inverted ? '#ffffff' : '#06b6c9') },
+  link: { [DARK]: 'none' }
 });
 const backgroundColorHover = theme.variants('mode', 'type', {
-  default: { [TTO]: '#babec5' },
-  primary: { [TTO]: ({ inverted }) => (inverted ? 'rgba(6, 182, 201, 0.1)' : '#05a4b5') },
-  link: { [TTO]: 'none' }
+  default: { [DARK]: '#babec5' },
+  primary: { [DARK]: ({ inverted }) => (inverted ? 'rgba(6, 182, 201, 0.1)' : '#05a4b5') },
+  link: { [DARK]: 'none' }
 });
 const color = theme.variants('mode', 'type', {
-  default: { [TTO]: '#6b6c72' },
-  primary: { [TTO]: ({ inverted }) => (inverted ? '#06b6c9' : '#ffffff') },
-  link: { [TTO]: '#05a4b5' }
+  default: { [DARK]: '#6b6c72' },
+  primary: { [DARK]: ({ inverted }) => (inverted ? '#06b6c9' : '#ffffff') },
+  link: { [DARK]: '#05a4b5' }
 });
 
 const textDecoration = theme.variants('mode', 'type', {
-  default: { [TTO]: 'none' },
-  primary: { [TTO]: 'none' },
-  link: { [TTO]: 'underline' }
+  default: { [DARK]: 'none' },
+  primary: { [DARK]: 'none' },
+  link: { [DARK]: 'underline' }
 });
 
 const border = theme.variants('mode', 'type', {
-  default: { [TTO]: '1px solid #ccc' },
-  primary: { [TTO]: '1px solid #06b6c9' },
-  link: { [TTO]: 'none' }
+  default: { [DARK]: '1px solid #ccc' },
+  primary: { [DARK]: '1px solid #06b6c9' },
+  link: { [DARK]: 'none' }
 });
 
 const StyledButton = styled.button`
