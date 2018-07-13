@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { create as createEnum } from '../../utils/enum';
+import { create as createEnum } from '../utils/enum';
 
 const DEFAULT_SHAPE = 'SQUARE';
 const shapes = createEnum({
