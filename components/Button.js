@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import theme from 'styled-theming';
-import { THEME_DEFAULT, THEME_PROPTYPE, themeModes } from '../../constants';
-import { create as createEnum } from '../../utils/enum';
+import { THEME_DEFAULT, THEME_PROPTYPE, themeModes } from '../constants';
+import { create as createEnum } from '../utils/enum';
 
 const TTO = themeModes.TURBO_TAX_ONLINE;
 const backgroundColor = theme.variants('mode', 'type', {
