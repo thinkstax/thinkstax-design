@@ -10,7 +10,7 @@ const { DARK } = themeModes;
 const backgroundColor = theme.variants('mode', 'type', {
   default: { [DARK]: '#d4d7dc' },
   primary: { [DARK]: ({ inverted }) => (inverted ? '#ffffff' : '#06b6c9') },
-  link: { [DARK]: 'none' }
+  link: { [DARK]: 'transparent' }
 });
 const backgroundColorHover = theme.variants('mode', 'type', {
   default: { [DARK]: '#babec5' },
