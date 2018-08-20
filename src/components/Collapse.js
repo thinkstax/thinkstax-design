@@ -3,13 +3,14 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Transition from 'react-transition-group/Transition';
-// transition: height ${({ duration }) => duration}ms ease-in-out;
+import { easing as easingEnum } from './constants';
+
 const View = styled.div`
   margin: 0;
   padding: 0;
   overflow: hidden;
-  transition: height ${props => props.duration}ms ease-in-out;
-  height: ${({ expanded }) => (expanded ? 'auto' : '0')}
+  transition: ${({ duration, delay, easing }) => `height ${duration}ms ${easing} ${delay ? `${delay}ms` : ''}`};
+  height: ${({ status }) => (status === 'entered' ? 'auto' : '0')}
 `;
 
 export default class Collapse extends Component {
@@ -80,9 +81,10 @@ export default class Collapse extends Component {
         onEntered={this.handleEntered}
         onExit={this.handleExit}
         onExiting={this.handleExiting}
+        mountOnEnter
       >
         {status => (
-          <View transitionStatus={status} expanded={inProp} {...otherProps}>
+          <View status={status} {...otherProps}>
             {children}
           </View>
         )}
@@ -90,9 +92,12 @@ export default class Collapse extends Component {
     );
   }
 }
+Collapse.easing = easingEnum;
 
 Collapse.propTypes = {
   duration: PropTypes.number,
+  delay: PropTypes.number,
+  easing: PropTypes.oneOf(Collapse.easing.values),
   in: PropTypes.bool,
   children: PropTypes.node.isRequired,
   onEnter: PropTypes.func,
@@ -105,6 +110,8 @@ Collapse.propTypes = {
 
 Collapse.defaultProps = {
   duration: 500,
+  delay: 0,
+  easing: Collapse.easing.EASE_IN_OUT,
   in: false,
   onEnter: noop,
   onEntering: noop,
