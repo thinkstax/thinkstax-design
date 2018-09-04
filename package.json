@@ -1,0 +1,48 @@
+{
+  "name": "thinkstax-design",
+  "version": "1.0.0",
+  "description": "ThinkStax Design Language System",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "test jest --coverage",
+    "start": "webpack-dev-server --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thinkstax/thinkstax-design.git"
+  },
+  "keywords": [
+    "design",
+    "ui",
+    "ux",
+    "react",
+    "components",
+    "react-components",
+    "framework"
+  ],
+  "author": "Markus Anthony Daehn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thinkstax/thinkstax-design/issues"
+  },
+  "homepage": "https://github.com/thinkstax/thinkstax-design#readme",
+  "peerDependencies": {
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-styled-components": "^1.5.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "html-webpack-plugin": "^3.2.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "styled-components": "^3.3.3",
+    "styled-theming": "^2.2.0",
+    "webpack": "^4.16.3",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
+  }
+}
