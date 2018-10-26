@@ -48,7 +48,7 @@ Fade.propTypes = {
   duration: PropTypes.number,
   delay: PropTypes.number,
   easing: PropTypes.oneOf(Fade.easing.values),
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   onEnter: PropTypes.func
 };
 
